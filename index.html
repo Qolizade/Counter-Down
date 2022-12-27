@@ -16,10 +16,43 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   </head>
   <body>
-    <div id="counters">
-      <p id="counterMinutes" class="counter">2</p>
-      <span>:</span>
-      <p id="counterSeconds" class="counter">00</p>
+    <div>
+      <h1>CountDown Training</h1>
+      <p>
+        This project is written in JavaScript and is a 2-minute countdown timer
+      </p>
+      <form>
+        <div id="counters">
+          <p id="counterMinutes" class="counter">2</p>
+          <span>:</span>
+          <p id="counterSeconds" class="counter">00</p>
+        </div>
+        <div id="buttons">
+          <button
+            onclick="start()"
+            type="button"
+            class="start material-symbols-outlined"
+          >
+            pause
+          </button>
+          <button
+            disabled
+            onclick="pause()"
+            type="button"
+            class="pause material-symbols-outlined"
+          >
+            pause
+          </button>
+          <button
+            disabled
+            onclick="Reset()"
+            type="button"
+            class="reset material-symbols-outlined"
+          >
+            replay
+          </button>
+        </div>
+      </form>
     </div>
     <script src="script.js"></script>
   </body>
