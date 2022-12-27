@@ -20,3 +20,18 @@ var start = function () {
     document.getElementsByClassName("reset")[0].disabled = false;
   }, 1000);
 };
+
+var pause = function () {
+  clearInterval(countInterval);
+  Cookies.set("state", "paused");
+  document.getElementsByClassName("start")[0].disabled = false;
+  document.getElementsByClassName("pause")[0].disabled = true;
+};
+
+var reset = function () {
+  pause();
+  count = 120;
+  Cookies.set("count", count);
+  document.getElementById("counter").innerHTML = count;
+  document.getElementsByClassName("reset")[0].disabled = true;
+};
