@@ -1,6 +1,16 @@
 let count = 120;
 let countInterval;
 
+var onLoadCounter = function () {
+  count = Number(Cookies.get("count"));
+  document.getElementById("counter").innerHTML = count;
+
+  previousState = Cookies.get("state");
+  if (previousState === "started") {
+    start();
+  }
+};
+
 var start = function () {
   countInterval = setInterval(function () {
     count--;
