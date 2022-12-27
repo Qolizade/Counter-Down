@@ -4,6 +4,7 @@ body {
   outline: 0;
   font-family: sans-serif;
 }
+
 form {
   margin-left: auto;
   margin-right: auto;
@@ -11,4 +12,62 @@ form {
   padding: 24px 32px;
   border-radius: 30px;
   background-color: white;
+}
+
+.counter {
+  font-size: 30px;
+  margin: 10px;
+  display: inline-block;
+}
+
+#buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  /* padding: 10px 20px; */
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  transition-duration: 400ms;
+  color: white;
+}
+
+#buttons button:hover {
+  box-shadow: 1px 1px gray;
+  opacity: 0.8;
+}
+#buttons button.start {
+  background-color: green;
+}
+
+#buttons button.start:disabled {
+  background-color: gray;
+  opacity: 0.5;
+  color: black;
+}
+
+#buttons button.pause {
+  background-color: rgb(238, 92, 92);
+}
+#buttons button.pause:disabled {
+  background-color: gray;
+  opacity: 0.5;
+  color: black;
+}
+
+#buttons button.reset {
+  background-color: #8208e6;
+}
+
+#buttons button.reset:disabled {
+  background-color: gray;
+  opacity: 0.5;
+  color: black;
 }
